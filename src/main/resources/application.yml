@@ -1,0 +1,41 @@
+spring:
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+  datasource:
+      driver-class-apartmentName: com.mysql.jdbc.Driver   #mysql的驱动
+      url: jdbc:mysql://127.0.0.1:3306/health
+      username: root
+      password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update         #【重点！以后选中不同的功能项时修改此处配置即可】这只是对于表的操作，具体数据的操作还需看Controller
+                  #create是每次启动都将重新创建一个只有格式没有内容的空表,update则不会
+                  #create-drop表示应用停下来时会自动把表删掉
+                  #none表示默认什么都不做
+                  #validate会验证表的属性是否与期望的一致，若不一致将报错
+      show-sql: true
+
+#公共配置与profiles选择无关 mapperLocations指的路径是src/main/resources
+mybatis:
+  typeAliasesPackage: com.homework.healthshop.entity
+  mapperLocations: classpath:mapper/*.xml
+
+qiniu:
+  AK: y-wrlAVBlsnIYFyP8CVoMB28VWW0onb-OtTrr_yW
+  SK: mjaX8bxphou9iMP8spUl9JgxYmiwIZbdb9i96a5d
+  spacename: utils
+  openUrl: http://pdeg9ntw0.bkt.clouddn.com
+
+
+server:
+  servlet:
+    context-path: /health
+  port: 8091
+#  port: 443
+#  ssl:
+#      key-store: C:\Program Files\Apache Software Foundation\Tomcat 7.0\conf\cert\1525688816500.pfx
+#      key-store-password: 1525688816500
+#      keyStoreType: PKCS12
