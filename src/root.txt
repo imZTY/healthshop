@@ -1,0 +1,25 @@
+卷 资料盘 的文件夹 PATH 列表
+卷序列号为 0005-6146
+F:\MYPROJECT\IDEA\HEALTHSHOP\SRC
+├─main
+│  ├─java
+│  │  └─com
+│  │      └─homework
+│  │          └─healthshop
+│  │              ├─annotation 自定义注解
+│  │              ├─aspect AOP逻辑类
+│  │              ├─constant 常量类
+│  │              ├─controller 控制类
+│  │              ├─DAO 持久层类
+│  │              ├─DTO 数据传输类
+│  │              ├─entity 数据库表实体类
+│  │              ├─MQ
+│  │              ├─repository JPA持久层类
+│  │              ├─service 服务层及其实现
+│  │              │  └─Impl
+│  │              └─utils 工具类
+│  └─resources
+│      ├─mapper
+│      ├─static
+│      └─templates
+└─test
